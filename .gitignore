@@ -1,0 +1,4 @@
+.venv
+.vscode
+*.qml
+figma_playground
