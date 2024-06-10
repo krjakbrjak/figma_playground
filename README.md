@@ -9,5 +9,5 @@ This is an illustrative example of how QML components can be generated from Figm
 
 ```bash
 go build
-./figma_playground
+./figma_playground -fileKey FILE_KEY -componentId COMPONENT_ID -apiKey API_KEY
 ```
