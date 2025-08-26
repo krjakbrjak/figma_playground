@@ -1,0 +1,24 @@
+Rectangle {
+    color: 'transparent'
+    x: {{x}}
+    y: {{y}}
+    width: {{width}}
+    height: {{height}}
+{{#if clip}}
+    clip: true
+{{/if}}
+    Rectangle {
+        anchors.centerIn: parent
+        width: {{originalWidth}}
+        height: {{originalHeight}}
+        rotation: {{rotationDeg}}
+        color: 'transparent'
+    {{#if borderColor}}
+        border.color: {{borderColor}}
+    {{/if}}
+    {{#if borderWidth}}
+        border.width: {{borderWidth}}
+    {{/if}}
+        {{{child}}}
+    }
+}

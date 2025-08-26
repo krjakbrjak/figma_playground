@@ -1,0 +1,18 @@
+Text {
+    text: "{{characters}}"
+    font.weight: {{style.fontWeight}}
+    font.pixelSize: {{style.fontSize}}
+    wrapMode: Text.WordWrap
+    width: parent.width
+    {{#if style.fontFamily}}
+    font.family: "{{style.fontFamily}}"
+{{/if}}
+{{#if color}}
+    color: {{color}}
+{{/if}}
+{{#if style.lineHeightPx}}
+{{#if style.fontSize}}
+    baselineOffset: {{calcBaselineOffset style.lineHeightPx style.fontSize}}
+{{/if}}
+{{/if}}
+}
