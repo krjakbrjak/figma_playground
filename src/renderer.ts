@@ -9,6 +9,15 @@ import { Rectangle, Node } from "@figma/rest-api-spec";
 import fs from "fs";
 import path from "path";
 
+Handlebars.registerHelper('indent', function(str: string, spaces: number) {
+    if (!str) return '';
+    const pad = ' '.repeat(spaces);
+    return str
+        .split('\n')
+        .map(line => pad + line)
+        .join('\n');
+});
+
 function loadTemplate(path: string): Handlebars.TemplateDelegate {
     const templateSource = fs.readFileSync(path, "utf8");
     return Handlebars.compile(templateSource);
