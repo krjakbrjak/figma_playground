@@ -1,0 +1,28 @@
+{
+  "name": "figma-gen",
+  "version": "0.1.0",
+  "description": "Figma code generation playground",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "cp -r src/templates dist/src/",
+    "start": "node dist/src/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@types/node": "^20.0.0",
+    "@types/yargs": "^17.0.33",
+    "eslint": "^9.34.0",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.41.0"
+  },
+  "dependencies": {
+    "@figma/rest-api-spec": "^0.33.0",
+    "handlebars": "^4.7.8",
+    "yargs": "^18.0.0"
+  }
+}

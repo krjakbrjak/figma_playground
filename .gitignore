@@ -1,4 +1,2 @@
-.venv
-.vscode
-*.qml
-figma_playground
+node_modules
+dist
